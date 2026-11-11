@@ -1,0 +1,16 @@
+{
+  "name": "gitea-plus",
+  "version": "0.4.3",
+  "private": true,
+  "description": "Chrome extension that adds review collapsing, newest-first timelines, regex-based comment folding, and a settings panel to Gitea.",
+  "scripts": {
+    "test": "node test/dom.test.mjs && node test/extension.test.mjs",
+    "test:dom": "node test/dom.test.mjs",
+    "test:extension": "node test/extension.test.mjs",
+    "test:live": "node test/live.test.mjs",
+    "package": "rm -rf dist && mkdir -p dist && zip -qr dist/gitea-plus-$npm_package_version.zip manifest.json src _locales popup docs README.md"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.65.0"
+  }
+}

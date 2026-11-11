@@ -1,0 +1,8 @@
+{
+  "extName": {
+    "message": "Gitea Plus"
+  },
+  "extDesc": {
+    "message": "Adds review collapsing, newest-first timelines, rule-based comment hiding, and a settings panel to Gitea."
+  }
+}

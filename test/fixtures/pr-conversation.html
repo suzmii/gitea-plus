@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="gitea-auto">
+<head>
+  <meta charset="utf-8">
+  <title>#1 - 演示 PR：多轮评审 - demo - Gitea</title>
+</head>
+<body>
+  <main class="issue-content-left comment-list prevent-before-timeline">
+    <div class="ui timeline">
+      <div class="timeline-item comment first" id="issue-1">
+        <div class="content comment-container">
+          <div class="comment-header"><div class="comment-header-left"><span>testuser</span></div></div>
+          <div class="ui attached segment comment-body">
+            <div class="render-content markup"><p>测试用 PR 描述，应保持在顶部。</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item comment" id="issuecomment-2">
+        <div class="content comment-container">
+          <div class="comment-header"><div class="comment-header-left"><span>testuser</span></div></div>
+          <div class="ui attached segment comment-body">
+            <div class="render-content markup"><p>普通讨论评论：先说明一下背景。</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item-group" id="issuecomment-4">
+        <div class="timeline-item event">
+          <a class="timeline-avatar timeline-avatar-offset" href="/testuser"><img alt="" width="40" height="40"></a>
+          <span class="badge tw-text-white"><svg class="svg octicon-comment" width="16" height="16"></svg></span>
+          <span class="comment-text-line"><a class="muted" href="/testuser">testuser</a> 于 <relative-time>2026-11-11 04:26:03 +00:00</relative-time> 评审</span>
+        </div>
+        <div class="timeline-item comment">
+          <div class="content comment-container">
+            <div class="comment-header avatar-content-left-arrow"><div class="comment-header-left"><span class="comment-text-line">testuser 留下了一条评论</span></div></div>
+            <div class="ui attached segment comment-body">
+              <div class="render-content markup"><h2>第一轮评审</h2><p>这是最早的评审意见，应该默认折叠。</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item event code-comments-list">
+          <div class="ui segments conversation-holder">
+            <div class="ui segment collapsible-comment-box"><a class="file-comment" href="#issuecomment-3">file.txt</a></div>
+            <div id="code-preview-3" class="ui table segment"><div class="file-body code-view">@@ -1,5 +1,6 @@</div></div>
+            <div id="code-comments-3" class="comment-code-cloud ui segment">
+              <div class="ui comments">
+                <div class="comment code-comment" id="issuecomment-3"><div class="content comment-container"><div class="text comment-content">行内意见：line2 需要优化</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item comment" id="issuecomment-5">
+        <div class="content comment-container">
+          <div class="comment-header"><div class="comment-header-left"><span>testuser</span></div></div>
+          <div class="ui attached segment comment-body">
+            <div class="render-content markup"><p>普通讨论评论：第二轮之前的讨论。</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item-group" id="issuecomment-7">
+        <div class="timeline-item event">
+          <a class="timeline-avatar timeline-avatar-offset" href="/testuser"><img alt="" width="40" height="40"></a>
+          <span class="badge tw-text-white"><svg class="svg octicon-comment" width="16" height="16"></svg></span>
+          <span class="comment-text-line"><a class="muted" href="/testuser">testuser</a> 于 <relative-time>2026-11-11 04:26:03 +00:00</relative-time> 评审</span>
+        </div>
+        <div class="timeline-item comment">
+          <div class="content comment-container">
+            <div class="comment-header avatar-content-left-arrow"><div class="comment-header-left"><span class="comment-text-line">testuser 留下了一条评论</span></div></div>
+            <div class="ui attached segment comment-body">
+              <div class="render-content markup"><h2>第二轮评审</h2><p>第二轮评审意见，也应默认折叠。</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item event code-comments-list">
+          <div class="ui segments conversation-holder">
+            <div class="ui segment collapsible-comment-box"><a class="file-comment" href="#issuecomment-6">file.txt</a></div>
+            <div id="code-preview-6" class="ui table segment"><div class="file-body code-view">@@ -3,3 +3,4 @@</div></div>
+            <div id="code-comments-6" class="comment-code-cloud ui segment">
+              <div class="ui comments">
+                <div class="comment code-comment" id="issuecomment-6"><div class="content comment-container"><div class="text comment-content">行内意见：新增 line6 缺少测试</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item comment" id="issuecomment-8">
+        <div class="content comment-container">
+          <div class="comment-header"><div class="comment-header-left"><span>testuser</span></div></div>
+          <div class="ui attached segment comment-body">
+            <div class="render-content markup"><p>普通讨论评论：第三轮之前的讨论。</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item-group" id="issuecomment-10">
+        <div class="timeline-item event">
+          <a class="timeline-avatar timeline-avatar-offset" href="/testuser"><img alt="" width="40" height="40"></a>
+          <span class="badge tw-text-white"><svg class="svg octicon-check" width="16" height="16"></svg></span>
+          <span class="comment-text-line"><a class="muted" href="/testuser">testuser</a> 于 <relative-time>2026-11-11 04:30:00 +00:00</relative-time> 评审</span>
+        </div>
+        <div class="timeline-item comment">
+          <div class="content comment-container">
+            <div class="comment-header avatar-content-left-arrow"><div class="comment-header-left"><span class="comment-text-line">testuser 留下了一条评论</span></div></div>
+            <div class="ui attached segment comment-body">
+              <div class="render-content markup"><h2>第三轮评审（最新）</h2><p>最新一轮评审意见，应保持展开。</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item event code-comments-list">
+          <div class="ui segments conversation-holder">
+            <div class="ui segment collapsible-comment-box"><a class="file-comment" href="#issuecomment-9">file.txt</a></div>
+            <div id="code-preview-9" class="ui table segment"><div class="file-body code-view">@@ -2,3 +1,4 @@</div></div>
+            <div id="code-comments-9" class="comment-code-cloud ui segment">
+              <div class="ui comments">
+                <div class="comment code-comment" id="issuecomment-9"><div class="content comment-container"><div class="text comment-content">行内意见：最新一轮的细节意见</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item tw-hidden" id="timeline-comments-end"></div>
+      <div class="timeline-item comment pull-merge-box" id="merge-box">
+        <div class="ui attached segment">合并操作区，应保持在底部。</div>
+      </div>
+      <div class="ui warning message" id="login-warning">登录并参与到对话中。</div>
+    </div>
+  </main>
+</body>
+</html>

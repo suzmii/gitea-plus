@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="light dark">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gitea Plus</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="header">
+    <img class="logo" src="../src/icons/icon48.png" alt="" width="36" height="36">
+    <div class="heading">
+      <h1>Gitea Plus</h1>
+      <p class="subtitle" data-i18n="subtitle"></p>
+    </div>
+  </header>
+
+  <main class="settings">
+    <label class="setting" for="collapseReviews">
+      <span class="setting-copy">
+        <span class="setting-title" data-i18n="collapseTitle"></span>
+        <span class="setting-desc" data-i18n="collapseDesc"></span>
+      </span>
+      <input class="switch" type="checkbox" id="collapseReviews" data-i18n-aria="collapseTitle" checked>
+    </label>
+
+    <label class="setting" for="reverseTimeline">
+      <span class="setting-copy">
+        <span class="setting-title" data-i18n="reverseTitle"></span>
+        <span class="setting-desc" data-i18n="reverseDesc"></span>
+      </span>
+      <input class="switch" type="checkbox" id="reverseTimeline" data-i18n-aria="reverseTitle" checked>
+    </label>
+
+    <label class="setting" for="patternCollapse">
+      <span class="setting-copy">
+        <span class="setting-title" data-i18n="patternTitle"></span>
+        <span class="setting-desc" data-i18n="patternDesc"></span>
+      </span>
+      <input class="switch" type="checkbox" id="patternCollapse" data-i18n-aria="patternTitle" checked>
+    </label>
+
+    <div class="rules-section" id="rulesSection">
+      <div class="rules-head">
+        <span class="rules-label" data-i18n="rulesLabel"></span>
+        <button class="add-rule" id="addRule" type="button" data-i18n="addRule"></button>
+      </div>
+      <div class="rules" id="rules"></div>
+      <p class="rules-hint" data-i18n="rulesHint"></p>
+    </div>
+  </main>
+
+  <p class="hint" data-i18n="hint"></p>
+
+  <footer class="footer">
+    <span class="status" id="status" role="status" aria-live="polite"></span>
+    <button class="reset" id="reset" type="button" data-i18n="reset"></button>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

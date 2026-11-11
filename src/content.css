@@ -1,0 +1,144 @@
+/* Toggle that is injected into a review event header. */
+.timeline-item.event > .gp-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex: 0 0 auto;
+  margin-left: auto;
+  padding: 1px 8px;
+  min-height: 24px;
+  border: 1px solid var(--color-secondary, #d0d7de);
+  border-radius: var(--border-radius, 4px);
+  background: var(--color-box-body, #ffffff);
+  color: var(--color-text-light-2, #5b6167);
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 18px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    border-color 0.12s ease,
+    color 0.12s ease,
+    background-color 0.12s ease;
+}
+
+.timeline-item.event > .gp-toggle:hover {
+  border-color: var(--color-primary, #4183c4);
+  color: var(--color-primary, #4183c4);
+}
+
+.timeline-item.event > .gp-toggle:focus-visible {
+  outline: 2px solid var(--color-primary, #4183c4);
+  outline-offset: 1px;
+}
+
+.gp-chevron {
+  flex: 0 0 auto;
+  transition: transform 0.12s ease;
+}
+
+.gp-toggle[aria-expanded="true"] .gp-chevron {
+  transform: rotate(90deg);
+}
+
+.gp-count {
+  min-width: 16px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: var(--color-secondary, #d0d7de);
+  color: var(--color-text, #181c21);
+  font-size: 11px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.gp-count[hidden] {
+  display: none;
+}
+
+/* Collapsed round: hide the review body and its inline comment list, but keep
+ * the review event header (reviewer, verdict, time) and the toggle visible. */
+.timeline-item-group.gp-collapsed > .timeline-item.comment,
+.timeline-item-group.gp-collapsed > .timeline-item.event.code-comments-list {
+  display: none !important;
+}
+
+@media (max-width: 420px) {
+  .timeline-item.event > .gp-toggle {
+    padding: 1px 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gp-chevron {
+    transition: none;
+  }
+}
+
+/* Rule-matched comments: hide the whole card by default. */
+.gp-rule-hidden {
+  display: none !important;
+}
+
+/* Hide a review inline-comment section when every card inside it is hidden. */
+.gp-rule-empty {
+  display: none !important;
+}
+
+/* Page-level checkboxes that reveal cards matched by each named rule. */
+.gp-rule-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 16px;
+  margin: 0 0 10px;
+  padding: 8px 10px;
+  border: 1px solid var(--color-secondary, #d0d7de);
+  border-radius: var(--border-radius, 4px);
+  background: var(--color-box-body, #ffffff);
+  color: var(--color-text-light-2, #5b6167);
+  font-size: 12px;
+}
+
+.gp-rule-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.gp-rule-filter input {
+  margin: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .gp-rule-toolbar {
+    gap: 6px 10px;
+    padding: 7px 8px;
+  }
+}
+
+/* Per-review "Show <rule>" filters, placed next to the review collapse toggle. */
+.timeline-item.event.gp-has-rule-filters > .gp-toggle {
+  margin-left: 6px;
+}
+
+.timeline-item.event > .gp-rule-event-filter {
+  flex: 0 0 auto;
+  margin-left: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.timeline-item.event > .gp-rule-event-filter:first-of-type {
+  margin-left: auto;
+}
+
+@media (max-width: 600px) {
+  .timeline-item.event > .gp-rule-event-filter {
+    font-size: 11.5px;
+  }
+}

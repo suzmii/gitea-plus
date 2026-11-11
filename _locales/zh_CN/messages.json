@@ -1,0 +1,8 @@
+{
+  "extName": {
+    "message": "Gitea Plus"
+  },
+  "extDesc": {
+    "message": "为 Gitea 增加评审意见折叠、时间线倒序、按规则隐藏评论和设置面板。"
+  }
+}
